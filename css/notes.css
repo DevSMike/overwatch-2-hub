@@ -1,0 +1,41 @@
+#wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.note {
+    height: 200px;
+    width: 150px;
+    background-color: #ffe69c;
+    border-radius: .25rem;
+    margin: .75rem;
+    cursor: grab;
+}
+
+.note:first-child {
+    background-color: #f1aeb5;
+}
+
+.note__content {
+    width: 100%;
+    padding: .5rem;
+    text-align: justify;
+    position: relative;
+    user-select: none;
+}
+
+.note__content>h5 {
+    text-align: center;
+}
+
+.note_hidden {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 0px transparent;
+    border: 1px dashed var(--bs-gray);
+}
+
+.note_hidden>.note__content {
+    display: none;
+}
