@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аpi</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/article.css">
+  <link rel="icon" type="image/jpg" href="icons/icon.jpg" />
+</head>
+
+<body id="top">
+<header class="header">
+    <div class="wrapper">
+        <div class="header__wrapper">
+          
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+             <a class="navbar-brand" href="https://overwatch2.playoverwatch.com/ru-ru/trailer">OVERWATCH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/article.html" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Статья
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../article.html#OW2">Overwatch 2 - анонсирование</a></li>
+                            <li><a class="dropdown-item" href="../article.html#story">Сюжет игры</a></li>
+                            <li><a class="dropdown-item" href="../article.html#system">Системные требования</a></li>
+                            <li><a class="dropdown-item" href="../article.html#difference">Отличия от первой части</a></li>
+						</ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="graphic.html">Статистика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notes.html">Заметки</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link " href="php/form.php">Анкета</a>
+                    </li>
+					<li class ="nav-item">
+					  <a class = "nav-link active" href="#"> Внешний API </a>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            <div class="menu-burger__header">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="wrapper">
+        <div class="form__wrapper">
+            <h1 class="heading">Внешний API</h1>
+            <div class="dataForRequest">
+                <form id="form" class="contact-form" method="post" name="contact-form"
+                      enctype="multipart/form-data">
+                    <label>
+                        <p class="head_input">Наименование компании:</p>
+                        <select id="company_name" class="_companyName _req" required>
+                            <option>Выберите компанию</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p class="head_input">Интервал графика:</p>
+                        <select id="interval" class="_interval _req" required>
+                            <option>Выберите интервал</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p class="head_input">Количество записей в ответе <span>(от 1 до 1700 записей)</span>:</p>
+                        <input class="_req _numbersOfRecords" type="number" id="numberOfRecords" value="500">
+                        <p class="span"></p>
+                    </label>
+                    <label>
+                        <p class="head_input">Начиная с даты:</p>
+                        <input class="_req _data" type="date" id="date" >
+                    </label>
+                    <button type="submit" class="form__button api_btn">Получить данные</button>
+                </form>
+                <canvas id="myChart" width="500" height="400"></canvas>
+                <br><br><br><br>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+
+</script>
+<script src="js/lightbox-plus-jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/api.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/graph.css">
+	<link rel="icon" type="image/jpg" href="icons/grapicicon.jpg" />
+    <style>
+        .table-hov tr {
+            transition: all 0.5s ease;
+        }
+
+        .table-hov tr:hover {
+            color: #000;
+            border-color: #bacbe6;
+            background-color: #bfd1ec;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+             <a class="navbar-brand" href="https://overwatch2.playoverwatch.com/ru-ru/trailer">OVERWATCH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Статья
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="article.html#OW2">Overwatch 2 - анонсирование</a></li>
+                            <li><a class="dropdown-item" href="article.html#story">Сюжет игры</a></li>
+                            <li><a class="dropdown-item" href="article.html#system">Системные требования</a></li>
+                            <li><a class="dropdown-item" href="article.html#difference">Отличия от первой части</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Статистика</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notes.html">Заметки</a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="php/form.php">Анкета</a>
+                    </li>
+					<li class ="nav-item">
+					  <a class = "nav-link " href="api.html"> Внешний API </a>
+					</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">График </h2>
+        </div>
+        <div class="row">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10"><canvas id="myChart"></canvas></div>
+            </div>
+            <div class="row justify-content-center">
+                <select class="col-12 col-sm-8 col-md-6" name="graph-color" id="graph-color">
+                    <option value="red">красный</option>
+                    <option value="green">зеленый</option>
+                    <option value="blue">синий</option>
+                </select>
+                <button type="button" id="graph-color-btn" class="btn btn-primary col-sm-4 col-md-2">Поменять
+                    цвет</button>
+            </div>
+        </div>
+        <div class="row">
+            <h2 class="text-center">Таблица</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <table id="graph-table" class="table table-striped table-bordered table-hov">
+                    <thead class="table-light">
+                        <th scope="col">Страна</th>
+                        <th scope="col">Процент людей, играющих в Overwatch (от числа молодых людей в %)</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Бразилия</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Чехия</td>
+                            <td>2.1</td>
+                        </tr>
+                        <tr>
+                            <td>Литва</td>
+                            <td>2.8</td>
+                        </tr>
+                        <tr>
+                            <td>Украина</td>
+                            <td>5.61</td>
+                        </tr>
+                        <tr>
+                            <td>Япония</td>
+                            <td>7.2</td>
+                        </tr>
+                        <tr>
+                            <td>Финляндия</td>
+                            <td>7.8</td>
+                        </tr>
+                        <tr>
+                            <td>Россия</td>
+                            <td>15.2</td>
+                        </tr>
+                        <tr>
+                            <td>Германия</td>
+                            <td>19.23</td>
+                        </tr>
+                        <tr>
+                            <td>Южная Корея</td>
+                            <td>40.1</td>
+                        </tr>
+                        <tr>
+                            <td>США</td>
+                            <td>56.4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/jarts.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
